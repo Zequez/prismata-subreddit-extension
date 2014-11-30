@@ -13,6 +13,7 @@
     "gulp-karma": "0.0.4",
     "coffee-script": "~1.8.0",
     "jasmine-core": "~2.1.2",
-    "karma-jasmine": "~0.3.2"
+    "karma-jasmine": "~0.3.2",
+    "gulp-zip": "~2.0.2"
   }
 }
