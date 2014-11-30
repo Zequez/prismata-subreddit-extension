@@ -11,7 +11,7 @@
   },
   "background": {
     "scripts": [
-      "src/bg/background.js"
+      "src/bg/all.js"
     ],
     "persistent": true
   },
@@ -20,11 +20,12 @@
   ],
   "content_scripts": [
     {
+      "run_at": "document_end",
       "matches": [
         "http://www.reddit.com/*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/inject/all.js"
       ]
     }
   ]
