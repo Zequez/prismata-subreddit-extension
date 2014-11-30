@@ -4,6 +4,7 @@ coffee = require 'gulp-coffee'
 concat = require 'gulp-concat'
 jasmine = require 'gulp-jasmine-phantom'
 jasminePhantomJs = require 'gulp-jasmine2-phantomjs'
+karma = require 'gulp-karma'
 
 sources =
   watch: ['./src/**/*.coffee', './spec/**/*.coffee']
@@ -43,11 +44,29 @@ gulp.task 'coffee', ->
     .pipe(coffee())
     .pipe(gulp.dest(destinations.background))
 
+# gulp.task 'test', ->
+#   gulp.src(sources.tests)
+#     .pipe(concat(destinations.concat))
+#     .pipe(coffee())
+#     .pipe(gulp.dest(destinations.test))
+#     .pipe(karma(
+#       configFile: 'karma.conf.js'
+#       action: 'run'
+#     ))
+#     .on('error', (err)-> throw err)
+
+gulp.task 'test_build', ->
   gulp.src(sources.tests)
     .pipe(concat(destinations.concat))
     .pipe(coffee())
     .pipe(gulp.dest(destinations.test))
-    .pipe(jasmine())
+
+gulp.task 'watch_test', ->
+  gulp.src(destinations.test + destinations.concat)
+    .pipe(karma(
+      configFile: 'karma.conf.js'
+      action: 'watch'
+    ))
 
   # gulp.src(sources.specRunner)
   #   .pipe(jasminePhantomJs())
@@ -56,8 +75,9 @@ gulp.task 'coffee', ->
   #     this.emit 'end'
 
 gulp.task 'watch', ->
-  gulp.watch sources.watch, ['coffee']
+  gulp.watch sources.watch, ['coffee', 'test_build']
 
 gulp.task 'default', [
   'watch'
+  'watch_test'
 ]

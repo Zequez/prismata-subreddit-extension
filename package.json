@@ -9,7 +9,10 @@
     "gulp-util": "~2.2.14",
     "gulp-coffee": "~1.4.1",
     "gulp-concat": "~2.4.2",
-    "gulp-jasmine2-phantomjs": "~0.2.0",
-    "gulp-jasmine-phantom": "~1.0.13"
+    "karma": "~0.12.28",
+    "gulp-karma": "0.0.4",
+    "coffee-script": "~1.8.0",
+    "jasmine-core": "~2.1.2",
+    "karma-jasmine": "~0.3.2"
   }
 }

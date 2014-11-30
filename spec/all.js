@@ -40,6 +40,34 @@ the picture from the background
 
 
   /**
+  Generates a mousehover link with the name of the unit
+  @class
+   */
+
+  UnitCard = (function() {
+    function UnitCard(unit, element, html) {
+      this.unit = unit;
+      this.element = element;
+      this.html = html;
+      console.log('Unit found!', this.unit.name);
+    }
+
+
+    /**
+    Inserts an <a> element where the unit name was found
+    @returns {String} the new HTML of the parent element
+     */
+
+    UnitCard.prototype.insert = function() {
+      return this.html;
+    };
+
+    return UnitCard;
+
+  })();
+
+
+  /**
   Loads and generates all the units
   @class
    */
@@ -92,34 +120,6 @@ the picture from the background
     };
 
     return Units;
-
-  })();
-
-
-  /**
-  Generates a mousehover link with the name of the unit
-  @class
-   */
-
-  UnitCard = (function() {
-    function UnitCard(unit, element, html) {
-      this.unit = unit;
-      this.element = element;
-      this.html = html;
-      console.log('Unit found!', this.unit.name);
-    }
-
-
-    /**
-    Inserts an <a> element where the unit name was found
-    @returns {String} the new HTML of the parent element
-     */
-
-    UnitCard.prototype.insert = function() {
-      return this.html;
-    };
-
-    return UnitCard;
 
   })();
 
