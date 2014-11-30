@@ -9,7 +9,7 @@
   - Account for common spelling mistakes and differences
   - Match prismata post on the front page too
 - 0.3.0 (planned)
-  - Add little icons next to each match
+  - Add little icons next to each match, use the CSS from the flairs
   - Replace standalone letters of basic unit with icons too
 - 0.4.0 (planned)
   - Add a toolbox for injecting units when creating a post or a comment
