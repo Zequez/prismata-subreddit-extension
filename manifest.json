@@ -1,0 +1,15 @@
+{
+  "name": "Prismata Subreddit Extension",
+  "version": "0.0.0",
+  "description": "Finds mentions of Prismata units inside the Prismata subreddit and it displays it when you hover the mouse",
+  "icons": { "128": "icon.png" },
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    { "matches": ["http://www.reddit.com/*"], "js": ["prismata_subreddit_content_script.js"] }
+  ],
+  "permissions": [
+    "tabs",
+    "https://www.reddit.com/*"
+  ],
+  "manifest_version": 2
+}
