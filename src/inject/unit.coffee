@@ -13,13 +13,13 @@ class Unit
     @generateRegex()
 
   generateRegex: ->
-    @regex = new RegExp(@name, i) # TODO: make an actual regex
+    @regex = new RegExp(@name, 'i') # TODO: make an actual regex
 
   test: (text)->
     @regex.test text
 
   match: (text)->
-    @regex.match text
+    text.match(@regex)
 
   card: ->
     @cardPromise

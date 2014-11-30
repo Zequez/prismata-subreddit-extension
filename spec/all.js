@@ -9,7 +9,7 @@ the picture from the background
  */
 
 (function() {
-  var Unit, UnitCard, Units, isPrismataSubreddit, units;
+  var Unit, UnitCard, Units;
 
   Unit = (function() {
     function Unit(name, cardPromise) {
@@ -123,11 +123,22 @@ the picture from the background
 
   })();
 
-  isPrismataSubreddit = document.location.pathname.match(/^\/r\/prismata/i);
-
-  if (isPrismataSubreddit) {
-    units = new Units();
-    units.load(document.body);
-  }
+  describe('Unit', function() {
+    it('should match its name exactly', function() {
+      var unit;
+      unit = new Unit('Conduit', null);
+      return expect(unit.match('rsarsasrar Conduit arstras')).toBeTruthy();
+    });
+    it('should not match the name whe its not there', function() {
+      var unit;
+      unit = new Unit('Conduit', null);
+      return expect(unit.match('rsarsasrar Potato arstras')).toBeFalsy();
+    });
+    return it('should match the name case insensitive', function() {
+      var unit;
+      unit = new Unit('Conduit', null);
+      return expect(unit.match('nitnihi COnDUIt trast')).toBeTruthy();
+    });
+  });
 
 }).call(this);

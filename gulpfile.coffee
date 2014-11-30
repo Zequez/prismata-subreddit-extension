@@ -2,9 +2,11 @@ gulp = require 'gulp'
 gutil = require 'gulp-util'
 coffee = require 'gulp-coffee'
 concat = require 'gulp-concat'
+jasmine = require 'gulp-jasmine-phantom'
+jasminePhantomJs = require 'gulp-jasmine2-phantomjs'
 
 sources =
-  watch: './src/**'
+  watch: ['./src/**/*.coffee', './spec/**/*.coffee']
   backgrounds: [
     './src/bg/**/!(run)*.coffee'
     './src/bg/run.coffee'
@@ -14,14 +16,25 @@ sources =
     './src/inject/**/!(run)*.coffee'
     './src/inject/run.coffee'
   ]
+
+  tests: [
+    './src/**/!(run)*.coffee'
+    './spec/**/*.coffee'
+  ]
+
+  specRunner: './spec/spec_runner.html'
+
 destinations =
   background: './src/bg/'
   inject: './src/inject/'
+  test: './spec/'
   concat: 'all.js'
 
 gulp.task 'coffee', ->
   gulp.src(sources.injects)
-    .pipe(concat(destinations.concat)) # We concat first so we don't clutter the global space having to declare any global variable
+    # We concat first so we don't need to clutter
+    # the global space with global variables
+    .pipe(concat(destinations.concat))
     .pipe(coffee())
     .pipe(gulp.dest(destinations.inject))
 
@@ -30,10 +43,21 @@ gulp.task 'coffee', ->
     .pipe(coffee())
     .pipe(gulp.dest(destinations.background))
 
+  gulp.src(sources.tests)
+    .pipe(concat(destinations.concat))
+    .pipe(coffee())
+    .pipe(gulp.dest(destinations.test))
+    .pipe(jasmine())
 
-gulp.task "watch", ->
-  gulp.watch sources.watch, ["coffee"]
+  # gulp.src(sources.specRunner)
+  #   .pipe(jasminePhantomJs())
+  #   .on 'error', (err)->
+  #     console.log arguments
+  #     this.emit 'end'
 
-gulp.task "default", [
-  "watch"
+gulp.task 'watch', ->
+  gulp.watch sources.watch, ['coffee']
+
+gulp.task 'default', [
+  'watch'
 ]
