@@ -19,7 +19,8 @@ sources =
 
   tests: [
     './src/**/!(run)*.coffee'
-    './spec/**/*.coffee'
+    './spec/spec_helper.coffee'
+    './spec/**/!(spec_helper)*.coffee'
   ]
 
   copy: [
@@ -81,7 +82,7 @@ gulp.task 'spec_build', ->
 gulp.task 'karma_watch', ->
   gulp.src(destinations.testPath + destinations.testName)
     .pipe(karma(
-      configFile: 'karma.conf.js'
+      configFile: 'karma.conf.coffee'
       action: 'watch'
     ))
 
