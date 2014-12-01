@@ -73,7 +73,7 @@ gulp.task 'src_copy', ->
 # copy inject, background and specs combined files to /tmp
 gulp.task 'spec_build', ->
   gulp.src(sources.tests)
-    .pipe(concat(destinations.testPath))
+    .pipe(concat(destinations.testName))
     .pipe(coffee())
     .pipe(gulp.dest(destinations.testPath))
 
