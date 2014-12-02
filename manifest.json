@@ -13,7 +13,7 @@
     "scripts": [
       "src/bg/all.js"
     ],
-    "persistent": true
+    "persistent": false
   },
   "permissions": [
     "http://www.reddit.com/"

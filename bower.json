@@ -1,6 +1,7 @@
 {
   "name": "prismata-subreddit-extension",
   "devDependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "modulejs": "~1.5.0"
   }
 }

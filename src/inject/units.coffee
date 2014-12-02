@@ -9,32 +9,23 @@ class Units
     @cards = []
 
   load: (targetElement)->
-    @loadUnits().then =>
+    @_loadUnits().then =>
       @searchPage(targetElement)
 
-  loadUnits: ->
-    # TODO: Load it from the background page
-    @unitsNames = [
-      "Engineer"
-      "Drone"
-      "Conduit"
-      "Blastforge"
-      "Animus"
-      "Forcefield"
-      "Gauss Cannon"
-      "Wall"
-      "Steelsplitter"
-      "Tarsier"
-      "Rhino"
-    ]
+  _loadUnits: ->
+    new Promise (resolve)->
+      # TODO: Load it from the background page
+      chrome.runtime.sendMessage 'units', (response)=>
+        @unitsNames = response
 
-    cardPromise = new Promise (resolve, reject)->
-      resolve('http://potato.com')
+        cardPromise = new Promise (resolve, reject)->
+          resolve('http://potato.com')
 
-    for name in @unitsNames
-      @units.push new Unit(name, cardPromise)
+        for name in @unitsNames
+          @units.push new Unit(name, cardPromise)
 
-    Promise.resolve @units
+        resolve()
+
 
   searchPage: (targetElement)->
     paragraphs = targetElement.querySelectorAll('.entry .md p')

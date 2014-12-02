@@ -1,3 +1,5 @@
+# console.log modulejs
+
 ###*
 This class takes care of matching the name and retrieving
 the picture from the background
@@ -23,4 +25,3 @@ class Unit
 
   cardImageUrl: ->
     @cardImageUrlPromise
-

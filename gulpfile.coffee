@@ -5,6 +5,7 @@ concat =  require 'gulp-concat'
 karma =   require('karma').server
 zip =     require 'gulp-zip'
 sourcemaps = require 'gulp-sourcemaps'
+merge = require 'merge-stream'
 
 sources =
   watch: ['./src/**/*.coffee', './spec/**/*.coffee']
@@ -12,7 +13,11 @@ sources =
     './src/bg/**/!(run)*.coffee'
     './src/bg/run.coffee'
   ]
-  
+
+  injectsVendor: [
+    #'./bower_components/modulejs/dist/modulejs.min.js'
+  ]
+
   injects: [
     './src/inject/**/!(run)*.coffee'
     './src/inject/run.coffee'
@@ -53,26 +58,31 @@ destinations =
 
 # copy inject and background combined files to /build
 gulp.task 'src_build', ->
-  gulp.src(sources.injects)
-    # We concat first so we don't need to clutter
-    # the global space with global variables
-    .pipe(sourcemaps.init())
+  injects = gulp.src(sources.injects)
+    # .pipe(sourcemaps.init())
     .pipe(concat(destinations.injectName))
     .pipe(coffee())
-    .pipe(sourcemaps.write())
+    # .pipe(sourcemaps.write())
+    .pipe(gulp.dest(destinations.injectPath))
+
+  merge injects, gulp.src(sources.injectsVendor)
+    .pipe(concat(destinations.injectName))
     .pipe(gulp.dest(destinations.injectPath))
 
   gulp.src(sources.backgrounds)
-    .pipe(sourcemaps.init())
+    # .pipe(sourcemaps.init())
     .pipe(concat(destinations.backgroundName))
     .pipe(coffee())
-    .pipe(sourcemaps.write())
+    # .pipe(sourcemaps.write())
     .pipe(gulp.dest(destinations.backgroundPath))
 
 gulp.task 'src_build_for_deployment', ->
-  gulp.src(sources.injects)
+  injects = gulp.src(sources.injects)
     .pipe(concat(destinations.injectName))
     .pipe(coffee(bare: true))
+
+  merge injects, gulp.src(sources.injectsVendor)
+    .pipe(concat(destinations.injectName))
     .pipe(gulp.dest(destinations.injectPath))
 
   gulp.src(sources.backgrounds)
@@ -89,12 +99,16 @@ gulp.task 'src_copy', ->
     .pipe(gulp.dest(destinations.copyPath))
 
 # copy inject, background and specs combined files to /tmp
-gulp.task 'spec_build', ->
-  gulp.src(sources.tests)
+gulp.task 'src_build_for_test', ->
+  tests = gulp.src(sources.tests)
     # .pipe(sourcemaps.init())
     .pipe(concat(destinations.testName))
     .pipe(coffee())
     # .pipe(sourcemaps.write())
+    .pipe(gulp.dest(destinations.testPath))
+
+  merge tests, gulp.src(sources.injectsVendor)
+    .pipe(concat(destinations.testName))
     .pipe(gulp.dest(destinations.testPath))
 
 # karma doesn't like gulp watching, so she has to watch herself
@@ -105,7 +119,7 @@ gulp.task 'karma_watch', (done)->
 
 # watch /src folder for src build, spec build and copying
 gulp.task 'watch', ->
-  gulp.watch sources.watch, ['src_build', 'spec_build']
+  gulp.watch sources.watch, ['src_build', 'src_build_for_test']
   gulp.watch sources.copy, ['src_copy']
 
 # create a zip from the /build folder
@@ -121,11 +135,11 @@ gulp.task 'default', [
   'karma_watch'
   'src_copy'
   'src_build'
-  'spec_build'
+  'src_build_for_test'
 ]
 
 gulp.task 'build', [
   'src_copy'
-  'src_build'
+  'src_build_for_deployment'
   'build_zip'
 ]
