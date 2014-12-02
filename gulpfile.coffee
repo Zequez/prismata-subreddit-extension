@@ -2,8 +2,9 @@ gulp =    require 'gulp'
 gutil =   require 'gulp-util'
 coffee =  require 'gulp-coffee'
 concat =  require 'gulp-concat'
-karma =   require 'gulp-karma'
+karma =   require('karma').server
 zip =     require 'gulp-zip'
+sourcemaps = require 'gulp-sourcemaps'
 
 sources =
   watch: ['./src/**/*.coffee', './spec/**/*.coffee']
@@ -55,14 +56,30 @@ gulp.task 'src_build', ->
   gulp.src(sources.injects)
     # We concat first so we don't need to clutter
     # the global space with global variables
+    .pipe(sourcemaps.init())
     .pipe(concat(destinations.injectName))
     .pipe(coffee())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(destinations.injectPath))
+
+  gulp.src(sources.backgrounds)
+    .pipe(sourcemaps.init())
+    .pipe(concat(destinations.backgroundName))
+    .pipe(coffee())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(destinations.backgroundPath))
+
+gulp.task 'src_build_for_deployment', ->
+  gulp.src(sources.injects)
+    .pipe(concat(destinations.injectName))
+    .pipe(coffee(bare: true))
     .pipe(gulp.dest(destinations.injectPath))
 
   gulp.src(sources.backgrounds)
     .pipe(concat(destinations.backgroundName))
-    .pipe(coffee())
+    .pipe(coffee(bare: true))
     .pipe(gulp.dest(destinations.backgroundPath))
+
 
 # copy the rest of the files to /build
 gulp.task 'src_copy', ->
@@ -74,17 +91,17 @@ gulp.task 'src_copy', ->
 # copy inject, background and specs combined files to /tmp
 gulp.task 'spec_build', ->
   gulp.src(sources.tests)
+    # .pipe(sourcemaps.init())
     .pipe(concat(destinations.testName))
     .pipe(coffee())
+    # .pipe(sourcemaps.write())
     .pipe(gulp.dest(destinations.testPath))
 
 # karma doesn't like gulp watching, so she has to watch herself
-gulp.task 'karma_watch', ->
-  gulp.src(destinations.testPath + destinations.testName)
-    .pipe(karma(
-      configFile: 'karma.conf.coffee'
-      action: 'watch'
-    ))
+gulp.task 'karma_watch', (done)->
+  karma.start
+    configFile: __dirname + '/karma.conf.coffee'
+  , done
 
 # watch /src folder for src build, spec build and copying
 gulp.task 'watch', ->
@@ -104,6 +121,7 @@ gulp.task 'default', [
   'karma_watch'
   'src_copy'
   'src_build'
+  'spec_build'
 ]
 
 gulp.task 'build', [

@@ -46,5 +46,5 @@ class Units
         if match = unit.test(html)
           unitCard = new UnitCard(unit, element, html)
           @cards.push unitCard
-          html = unitCard.insert()
+          html = unitCard.insertInParent()
     return

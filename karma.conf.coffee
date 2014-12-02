@@ -3,5 +3,6 @@ module.exports = (config)->
     frameworks: ['jasmine']
 
     files: [
-      '*.js'
+      'bower_components/jquery/dist/jquery.js'
+      'tmp/spec/**/*.js'
     ]

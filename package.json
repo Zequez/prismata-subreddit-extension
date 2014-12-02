@@ -14,6 +14,7 @@
     "coffee-script": "~1.8.0",
     "jasmine-core": "~2.1.2",
     "karma-jasmine": "~0.3.2",
-    "gulp-zip": "~2.0.2"
+    "gulp-zip": "~2.0.2",
+    "gulp-sourcemaps": "~1.2.8"
   }
 }

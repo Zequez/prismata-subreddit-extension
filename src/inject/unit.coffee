@@ -2,14 +2,14 @@
 This class takes care of matching the name and retrieving
 the picture from the background
 @class
-@param name The official name of the unit
-@param cardPromise The promise of the unit card
-       (the URL of a picture, which loads asynchronically)
+@param {String} name The official name of the unit
+@param {String} cardImageUrlPromise The promise of the unit card picture URL
+       (loads asynchronically)
 ###
 class Unit
-  constructor: (name, cardPromise)->
+  constructor: (name, cardImageUrlPromise)->
     @name = name
-    @cardPromise = cardPromise
+    @cardImageUrlPromise = cardImageUrlPromise
     @generateRegex()
 
   generateRegex: ->
@@ -21,5 +21,6 @@ class Unit
   match: (text)->
     text.match(@regex)
 
-  card: ->
-    @cardPromise
+  cardImageUrl: ->
+    @cardImageUrlPromise
+
