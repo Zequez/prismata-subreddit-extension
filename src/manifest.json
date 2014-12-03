@@ -1,6 +1,6 @@
 {
   "name": "Prismata Subreddit Extension",
-  "version": "0.0.1",
+  "version": "0.0.1", tarstrsatasrtsa
   "manifest_version": 2,
   "description": "Finds mentions of Prismata units inside the Prismata subreddit and it displays it when you hover the mouse",
   "homepage_url": "http://github.com/zequez/prismata-subreddit-extension",

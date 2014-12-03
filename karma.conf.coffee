@@ -4,5 +4,5 @@ module.exports = (config)->
 
     files: [
       'bower_components/jquery/dist/jquery.js'
-      'tmp/spec/**/*.js'
+      '_build_test/**/*.js'
     ]

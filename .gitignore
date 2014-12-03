@@ -1,6 +1,8 @@
 node_modules/
 bower_components/
 
-build/
+_build_dev/
+_build_prod/
+_build_test/
 tmp/
 extension.zip
