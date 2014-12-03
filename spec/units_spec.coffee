@@ -1,3 +1,5 @@
+Units = PS.Units
+
 describe 'Units', ->
   mockUnitsNames = [
     "Engineer"

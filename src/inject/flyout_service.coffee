@@ -5,7 +5,7 @@ Generates a mousehover link with the name of the unit
 @param {Unit} unit
 @param {HTMLElement} parent
 ###
-class FlyoutService
+class PS.FlyoutService
   className: 'prismata-subreddit-extension-flyout'
 
   constructor: ->
@@ -67,4 +67,4 @@ class FlyoutService
       @el.style.left = @x + 'px'
 
 
-FlyoutService = new FlyoutService
+PS.FlyoutService = new PS.FlyoutService

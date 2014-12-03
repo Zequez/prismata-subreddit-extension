@@ -1,3 +1,5 @@
+FlyoutService = PS.FlyoutService
+
 describe 'FlyoutService', ->
   flyoutEl = -> $('.' + FlyoutService.className)
 

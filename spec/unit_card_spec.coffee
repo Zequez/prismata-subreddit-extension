@@ -1,3 +1,7 @@
+Unit = PS.Unit
+UnitCard = PS.UnitCard
+FlyoutService = PS.FlyoutService
+
 describe 'UnitCard', ->
   describe '#insertInParent', ->
     it 'should wrap the unit name in an <a> tag', ->

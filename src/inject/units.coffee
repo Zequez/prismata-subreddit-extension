@@ -1,8 +1,11 @@
+Unit = PS.Unit
+UnitCard = PS.UnitCard
+
 ###*
 Loads and generates all the units
 @class
 ###
-class Units
+class PS.Units
   constructor: ->
     @unitsNames = []
     @units = []

@@ -1,3 +1,5 @@
+Unit = PS.Unit
+
 describe 'Unit', ->
   describe '#match', ->
     it 'should match its name exactly', ->

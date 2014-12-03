@@ -1,3 +1,5 @@
+FlyoutService = PS.FlyoutService
+
 ###*
 Generates a mousehover link with the name of the unit
 @class
@@ -5,7 +7,7 @@ Generates a mousehover link with the name of the unit
 @param {Unit} unit
 @param {HTMLElement} parent
 ###
-class UnitCard
+class PS.UnitCard
   constructor: (unit, parent)->
     @unit = unit
     @parent = parent

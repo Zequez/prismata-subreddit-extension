@@ -8,7 +8,7 @@ the picture from the background
 @param {String} cardImageUrlPromise The promise of the unit card picture URL
        (loads asynchronically)
 ###
-class Unit
+class PS.Unit
   constructor: (name, cardImageUrlPromise)->
     @name = name
     @cardImageUrlPromise = cardImageUrlPromise
