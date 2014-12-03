@@ -23,7 +23,7 @@ class PS.UnitCard
   @returns {String} Element to be generated in a string form
   ###
   replacementString: (match)->
-    "<a class=\"#{PS.UnitCard.className}\" href=\"#\">#{match}</a>"
+    "<a class=\"#{PS.UnitCard.className}\" href=\"#\"><span class=\"flair flair-#{@unit.flairName}\"></span>#{match}</a>"
 
   ###*
   Should be called to set the element generated from the #replacementString

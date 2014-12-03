@@ -9,6 +9,7 @@ the picture from the background
 class PS.Unit
   constructor: (name)->
     @name = name
+    @flairName = @_flairName()
     @pluralName = pluralize(@name, 2)
     @cardImageUrlPromise = null
 
@@ -37,3 +38,6 @@ class PS.Unit
 
   _cardImageUrlMessage: ->
     { action: 'unitCardImage', name: @name }
+
+  _flairName: ->
+    @name.toLowerCase().replace(/\s/g, '')

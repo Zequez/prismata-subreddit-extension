@@ -5,11 +5,11 @@ FlyoutService = PS.FlyoutService
 describe 'UnitCard', ->
   describe '#replacementString', ->
     it 'should return the parameter passed wrapped in an A element ready to use', ->
-      unit = new Unit 'Conduit'
+      unit = new Unit 'Potato Salad'
 
       unitCard = new UnitCard(unit)
       expect(unitCard.replacementString('Potato Salad'))
-      .toMatch /<a.*class=".*prismata-subreddit-extension-link.*".*>Potato Salad<\/a>/
+      .toMatch /<a.*class=".*prismata-subreddit-extension-link.*".*><span class="flair flair-potatosalad"><\/span>Potato Salad<\/a>/
 
   describe 'flyout', ->
     it 'should display a flyout when hovering the link', (done)->

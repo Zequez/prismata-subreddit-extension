@@ -73,7 +73,7 @@ describe 'Units', ->
 
       aa = doc.find('a.prismata-subreddit-extension-link')
       expect(aa.length).toBe 6
-      expect(aa.map((i, e)->e.innerHTML).toArray())
+      expect(aa.map((i, e)->e.innerText).toArray())
         .toMatch [
           'Conduit',
           'Animus',
