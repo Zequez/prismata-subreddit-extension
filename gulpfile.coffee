@@ -36,6 +36,7 @@ sources =
   ]
 
   srcInjects: [
+    './bower_components/pluralize/pluralize.js'
     './src/inject/preInject.coffee'
     './src/inject/**/!(inject|preInject)*.coffee'
     './src/inject/inject.coffee'

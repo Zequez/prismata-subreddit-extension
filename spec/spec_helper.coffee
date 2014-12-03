@@ -6,7 +6,6 @@ $.fn.fireEvent = (name)->
 
 $.fn.fireMouseEvent = (name, options)->
   ev = document.createEvent('MouseEvents')
-  console.log options
 
   defaults =
     screenX: 50
@@ -39,3 +38,9 @@ $.fn.fireMouseEvent = (name, options)->
 
   this[0].dispatchEvent ev
   return
+
+window.mockCardImageUrlEndpoint = (name, url)->
+  spyOn(chrome, 'runtime')
+  spyOn(chrome.runtime, 'sendMessage').and.callFake (message, callback)->
+    expect(message).toEqual {action: 'unitCardImage', name: name}
+    callback url

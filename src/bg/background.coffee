@@ -7,10 +7,29 @@ making all the neccesary requests to get the images links.
 #   chrome.pageAction.show sender.tab.id
 #   sendResponse()
 
+unitsNames = [
+  "Engineer"
+  "Drone"
+  "Conduit"
+  "Blastforge"
+  "Animus"
+  "Forcefield"
+  "Gauss Cannon"
+  "Wall"
+  "Steelsplitter"
+  "Tarsier"
+  "Rhino"
+]
+
+units = [
+
+]
+
 chrome.runtime.onMessage.addListener (message, sender, sendResponse)->
-  console.log message
-  console.log sender
-  sendResponse 'YES IM ALIVE!'
+  if message.action == 'units'
+    sendResponse(unitsNames)
+  else if message.action == 'unitCardImage'
+    sendResponse('http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/60/Chieftain-panel.png?version=124c47a962b2813a9b3397ba81753ecc')
 
 # setInterval ->
 #   console.log 'Sending message!'

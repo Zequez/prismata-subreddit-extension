@@ -1,71 +1,61 @@
-FlyoutService = PS.FlyoutService
+PS.FlyoutService
 
 ###*
 Generates a mousehover link with the name of the unit
 @class
 @requires FlyoutService
 @param {Unit} unit
-@param {HTMLElement} parent
 ###
 class PS.UnitCard
-  constructor: (unit, parent)->
+  @className: 'prismata-subreddit-extension-link'
+
+  constructor: (unit)->
     @unit = unit
-    @parent = parent
     @el = null # {HTMLElement}
-    @flyoutEl = null # {HTMLElement}
     @cardImageUrl = null # {String}
 
     console.log 'Unit found!', @unit.name
 
   ###*
-  Inserts an <a> element where the first unit name was found in the parent
+  This method is called from Units. It returns a replacement string, and then
+  it expects to receive the element generated from such string on #setElement
   @method
+  @returns {String} Element to be generated in a string form
   ###
-  insertInParent: ->
-    # TODO: Optimize this by analyzing text nodes instead of the innerHTML
-    parentHTML = @parent.innerHTML
+  replacementString: (match)->
+    "<a class=\"#{PS.UnitCard.className}\" href=\"#\">#{match}</a>"
 
-    match = @unit.match(parentHTML)
-
-    matchText = match[0]
-
-    preStart = 0
-    preEnd = match.index-1
-    postStart = match.index + matchText.length
-    postEnd = -1
-
-    preText = parentHTML[preStart..preEnd]
-    postText = parentHTML[postStart..postEnd]
-
-    @el = document.createElement('a')
-    @el.innerHTML = matchText
-
-    @parent.innerHTML = preText
-    @parent.appendChild(@el)
-    @parent.insertAdjacentHTML('beforeend', postText)
-
+  ###*
+  Should be called to set the element generated from the #replacementString
+  @method
+  @param {HTMLElement} element
+  ###
+  setElement: (el)->
+    @el = el
     @_addEvents()
     return
 
   _addEvents: ->
-    ev = document.createEvent("HTMLEvents")
-
     @el.addEventListener 'mouseover', => @_showFlyout()
     @el.addEventListener 'mouseout', => @_hideFlyout()
 
   _showFlyout: ->
     if @cardImageUrl
-      FlyoutService.show @cardImageUrl
+      PS.FlyoutService.show @cardImageUrl
     else
       @unit.cardImageUrl().then (cardImageUrl)=>
         @cardImageUrl = cardImageUrl
-        FlyoutService.show @cardImageUrl
+        @_setHref()
+        PS.FlyoutService.show @cardImageUrl
 
   _hideFlyout: ->
     if @cardImageUrl
-      FlyoutService.hide @cardImageUrl
+      PS.FlyoutService.hide @cardImageUrl
     else
       @unit.cardImageUrl().then (cardImageUrl)=>
-        FlyoutService.hide @cardImageUrl
+        PS.FlyoutService.hide @cardImageUrl
+
+  _setHref: ->
+    @el.href = @cardImageUrl
 
 

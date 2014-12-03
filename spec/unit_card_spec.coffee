@@ -3,34 +3,27 @@ UnitCard = PS.UnitCard
 FlyoutService = PS.FlyoutService
 
 describe 'UnitCard', ->
-  describe '#insertInParent', ->
-    it 'should wrap the unit name in an <a> tag', ->
-      unit = new Unit 'Conduit', Promise.resolve('')
-      div = $('<div>A good Conduit can make everyone <em>green</em>!</div>')
+  describe '#replacementString', ->
+    it 'should return the parameter passed wrapped in an A element ready to use', ->
+      unit = new Unit 'Conduit'
 
-      unitCard = new UnitCard(unit, div[0])
-      unitCard.insertInParent()
-      expect(div.html()).toMatch /A good <a.*>Conduit<\/a> can make everyone <em>green<\/em>!/
-
-    it "should just ignore the S on plurals (for now)", ->
-      unit = new Unit 'Conduit', Promise.resolve('')
-      div = $('<div>I love Conduits and everything green!</div>')
-
-      unitCard = new UnitCard(unit, div[0])
-      unitCard.insertInParent()
-      expect(div.html()).toMatch /I love <a.*>Conduit<\/a>s and everything green!/
+      unitCard = new UnitCard(unit)
+      expect(unitCard.replacementString('Potato Salad'))
+      .toMatch /<a.*class=".*prismata-subreddit-extension-link.*".*>Potato Salad<\/a>/
 
   describe 'flyout', ->
     it 'should display a flyout when hovering the link', (done)->
-      unit = new Unit 'Conduit', Promise.resolve('')
-      div = $('<div>A good Conduit can be awesome!</div>')
+      unit = new Unit 'Conduit'
+      mockCardImageUrlEndpoint('Conduit', 'a')
 
-      unitCard = new UnitCard(unit, div[0])
-      unitCard.insertInParent()
+      a = $('<a class="prismata-subreddit-extension-link">Conduit</a>')
+
+      unitCard = new UnitCard(unit)
+      unitCard.setElement(a[0])
 
       spyOn FlyoutService, 'show'
 
-      div.find('a').fireEvent 'mouseover'
+      a.fireEvent 'mouseover'
 
       setTimeout ->
         expect(FlyoutService.show).toHaveBeenCalled()
@@ -38,15 +31,15 @@ describe 'UnitCard', ->
       , 10
 
     it 'should hide the flyout when hovering out of the link', (done)->
-      unit = new Unit 'Conduit', Promise.resolve('')
-      div = $('<div>A good Conduit can be awesome!</div>')
+      unit = new Unit 'Conduit'
+      mockCardImageUrlEndpoint('Conduit', 'a')
+      a = $('<a class="prismata-subreddit-extension-link">Conduit</a>')
 
-      unitCard = new UnitCard(unit, div[0])
-      unitCard.insertInParent()
+      unitCard = new UnitCard(unit)
+      unitCard.setElement(a[0])
 
       spyOn FlyoutService, 'hide'
 
-      a = div.find('a')
       a.fireEvent 'mouseover'
       setTimeout ->
         a.fireEvent('mouseout')
@@ -58,15 +51,16 @@ describe 'UnitCard', ->
       , 10
 
     it 'should call the flyout with the result of the UnitCard promise', (done)->
-      unit = new Unit 'Conduit', Promise.resolve('rsarsa')
-      div = $('<div>A good Conduit can be awesome!</div>')
+      unit = new Unit 'Conduit'
+      mockCardImageUrlEndpoint('Conduit', 'rsarsa')
+      a = $('<a class="prismata-subreddit-extension-link">Conduit</a>')
 
-      unitCard = new UnitCard(unit, div[0])
-      unitCard.insertInParent()
+      unitCard = new UnitCard(unit)
+      unitCard.setElement(a[0])
 
       spyOn FlyoutService, 'show'
 
-      div.find('a').fireEvent 'mouseover'
+      a.fireEvent 'mouseover'
 
       setTimeout ->
         expect(FlyoutService.show).toHaveBeenCalledWith('rsarsa')
