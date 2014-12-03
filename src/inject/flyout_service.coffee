@@ -12,8 +12,8 @@ class PS.FlyoutService
     @el = null
     @imgEl = null
     @imageUrl = null
-    @x = null
-    @y = null
+    @mouseX = null
+    @mouseY = null
     @visible = false
     @_addWindowEvents()
 
@@ -27,6 +27,7 @@ class PS.FlyoutService
     @imageUrl = imageUrl
     @imgEl.src = @imageUrl
     @el.style.display = 'block'
+    @el.style.zIndex = '9999'
     @visible = true
     @_setPosition()
 
@@ -56,15 +57,16 @@ class PS.FlyoutService
 
   _addWindowEvents: ->
     document.body.addEventListener 'mousemove', (ev)=>
-      @x = ev.clientX + 10
-      @y = ev.clientY - 10
+      @mouseX = ev.clientX
+      @mouseY = ev.clientY
       @_setPosition()
 
   _setPosition: ->
-
     if @visible
-      @el.style.top = @y + 'px'
-      @el.style.left = @x + 'px'
-
+      height = document.documentElement.clientHeight
+      top = @mouseX + 10
+      bottom = height - @mouseY + 10
+      @el.style.left = top + 'px'
+      @el.style.bottom = bottom + 'px'
 
 PS.FlyoutService = new PS.FlyoutService

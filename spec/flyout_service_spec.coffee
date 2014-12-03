@@ -30,27 +30,36 @@ describe 'FlyoutService', ->
       expect(flyoutEl().is(':visible')).toBe true
 
     describe 'flyout position', ->
-      it 'should position the flyout 10px up/right next to the mouse', (done)->
+      iit 'should position the flyout 10px up/right next to the mouse', (done)->
+        pageHeight = document.documentElement.clientHeight
         $(document.body).fireMouseEvent 'mousemove', clientX: 50, clientY: 100
         setTimeout ->
           FlyoutService.show('a')
           setTimeout ->
-            expect(flyoutEl().position().left).toBe 60
-            expect(flyoutEl().position().top).toBe 90
+            left = flyoutEl().position().left
+            bottom = parseInt flyoutEl().css('bottom')
+
+            expect(left).toBe 50 + 10
+            expect(bottom).toBe pageHeight - 100 + 10
             done()
           , 10
         , 10
 
       it 'should move with the mouse', (done)->
+        height = document.documentElement.clientHeight
         FlyoutService.show('a')
         $(document.body).fireMouseEvent 'mousemove', clientX: 50, clientY: 100
         setTimeout ->
-          expect(flyoutEl().position().left).toBe 60
-          expect(flyoutEl().position().top).toBe 90
+          left = flyoutEl().position().left
+          bottom = parseInt flyoutEl().css('bottom')
+          expect(left).toBe 50 + 10
+          expect(bottom).toBe height - 100 + 10
           $(document.body).fireMouseEvent 'mousemove', clientX: 60, clientY: 110
           setTimeout ->
-            expect(flyoutEl().position().left).toBe 70
-            expect(flyoutEl().position().top).toBe 100
+            left = flyoutEl().position().left
+            bottom = parseInt flyoutEl().css('bottom')
+            expect(left).toBe 60 + 10
+            expect(bottom).toBe height - 110 + 10
             done()
           , 10
         , 10
