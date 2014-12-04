@@ -20,7 +20,7 @@ resetFilters()
 
 sources =
   watch: ['./src/**/*.coffee', './spec/**/*.coffee']
-  watch_static: ['./src/**/*', '!*.coffee']
+  watch_static: ['./src/**/*', './data/**/*', '!*.coffee']
 
   src: './src/**/*'
   spec: './spec/**/*'

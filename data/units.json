@@ -242,7 +242,9 @@
   "Blastforge": {
     "names": [
       "Blastforge",
-      "Blastforges"
+      "Blastforges",
+      "Battleforge",
+      "Battleforges"
     ],
     "url": "http://prismata.gamepedia.com/Blastforge",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/c6/Blastforge-panel.png"
