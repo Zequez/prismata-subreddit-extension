@@ -1,14 +1,27 @@
+## Prismata Subreddit Extension
+
+This is a *non-official* Chrome extension for the
+[Prismata Subreddit /r/Prismata](http://www.reddit.com/r/Prismata/).
+
+It adds a bunch of cool features:
+ - Adds icons next to the name the units (the same icons used on flails!).
+ - When you hover the mouse on an unit name it displays the unit panel with all the information
+   just like in the game. These panels come directly from the [official Prismata Wiki](http://prismata.gamepedia.com/).
+ - Each unit name detected is turned into a link to the Wiki page of that unit.
+
 ### data/units.json
 
 This file is loaded by the extension from this same repo. It has information
-about all the units in the game, along with a link to the wiki page, and
-a link to the official Wiki panel picture with all the unit information.
+about all the units in the game, along with a link to the Wiki page, and
+a link to the official wiki panel picture with all of the unit information.
 
-When a unit change we should update it here. You can make a pull request if you want.
+When a unit change or new units are added we should update it here. You can make
+a pull request if you want. Although I have the wiki units page on my watchlist,
+so I get an email when anything changes and I'll try to keep it in sync with the wiki.
 
-### Changelog
+### Changelog (and planned features)
 
-- 0.1.0 (in development)
+- 0.1.0 (current)
   - Inject script into the subreddit page and match the whole name of units
   - Load units data from the Github repo /data/units.json
   - Display the unit picture on mouse hover
@@ -30,5 +43,6 @@ When a unit change we should update it here. You can make a pull request if you 
 - 0.3.0 (planned)
   - Add a toolbox for injecting units when creating a post or a comment
 - 0.4.0 (planned)
-  - Automatically replace units with CSS-friendly equivalent to display icons and allow non-extensions users to see icons too
-    gonna need to coordinate with mods to add the ability to use the flail icons with links on the subreddit CSS.
+  - Using the toolbox, automatically replace units with CSS-friendly-link equivalent to display icons
+    and allow non-extensions users to see icons too. Gonna need to coordinate with mods
+    to add the ability to use links to display the flail icons changing the subreddit CSS.
