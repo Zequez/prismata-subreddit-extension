@@ -32,6 +32,7 @@ class PS.UnitCard
   ###
   setElement: (el)->
     @el = el
+    @el.style.whiteSpace = 'nowrap'
     @_addEvents()
     return
 
