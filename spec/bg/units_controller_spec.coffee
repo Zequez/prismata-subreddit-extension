@@ -13,6 +13,8 @@ describe 'UnitsController', ->
     spyOn(chrome.runtime.onMessage, 'addListener').and.callFake (listener)->
       callback(listener)
 
+  unitsJsonUrl = 'https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/data/units.json'
+
 
   describe '#listen', ->
     it 'should respond with all the loaded units when requested', (done)->
@@ -27,14 +29,14 @@ describe 'UnitsController', ->
           "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/0/02/Electrovore-panel.png"
 
       jasmine.Ajax.install()
-      jasmine.Ajax.stubRequest('https://raw.githubusercontent.com/zequez/prismata-subreddit-extension/data/units.json')
+      jasmine.Ajax.stubRequest(unitsJsonUrl)
         .andReturn
           responseText: JSON.stringify(units)
 
       mockAddListener (listener)->
         listener {action: 'units'}, '123123123', (units)->
           expect(jasmine.Ajax.requests.mostRecent().url)
-            .toMatch 'https://raw.githubusercontent.com/zequez/prismata-subreddit-extension/data/units.json'
+            .toMatch unitsJsonUrl
           expect(units).toMatch units
 
         listener {action: 'units'}, '123123123', (units)->
@@ -47,7 +49,7 @@ describe 'UnitsController', ->
     it 'should return the static units.json if the request fails', (done)->
       getFile 'units.json', (unitsData)->
         jasmine.Ajax.install()
-        jasmine.Ajax.stubRequest('https://raw.githubusercontent.com/zequez/prismata-subreddit-extension/data/units.json')
+        jasmine.Ajax.stubRequest(unitsJsonUrl)
           .andReturn
             responseText: 'NOT FOUND'
             status: 404

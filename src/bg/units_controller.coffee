@@ -8,7 +8,7 @@ of this extension.
 ###
 
 class PS.UnitsController
-  dataUrl: 'https://raw.githubusercontent.com/zequez/prismata-subreddit-extension/data/units.json'
+  dataUrl: 'https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/data/units.json'
   localDataUrl: -> chrome.extension.getURL('units.json')
 
   constructor: ->
