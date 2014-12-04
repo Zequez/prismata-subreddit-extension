@@ -17,7 +17,7 @@ describe 'UnitCard', ->
 
       unitCard = new UnitCard(unit)
       expect(unitCard.replacementString('Potato Salad'))
-      .toMatch /<a.*class=".*prismata-subreddit-extension-link.*".*><span class="flair flair-potatosalad"><\/span>Potato Salad<\/a>/
+      .toMatch /<a.*class=".*prismata-subreddit-extension-link.*".*href="http:\/\/prismata\.gamepedia\.com\/Conduit".*><span class="flair flair-potatosalad"><\/span>Potato Salad<\/a>/
 
   describe 'flyout', ->
     it 'should display a flyout when hovering the link', (done)->

@@ -14,8 +14,6 @@ class PS.UnitCard
     @el = null # {HTMLElement}
     @cardImageUrl = null # {String}
 
-    console.log 'Unit found!', @unit.name
-
   ###*
   This method is called from Units. It returns a replacement string, and then
   it expects to receive the element generated from such string on #setElement
@@ -23,7 +21,7 @@ class PS.UnitCard
   @returns {String} Element to be generated in a string form
   ###
   replacementString: (match)->
-    "<a class=\"#{PS.UnitCard.className}\" href=\"#\"><span class=\"flair flair-#{@unit.flairName}\"></span>#{match}</a>"
+    "<a class=\"#{PS.UnitCard.className}\" href=\"#{@unit.url}\"><span class=\"flair flair-#{@unit.flairName}\"></span>#{match}</a>"
 
   ###*
   Should be called to set the element generated from the #replacementString
