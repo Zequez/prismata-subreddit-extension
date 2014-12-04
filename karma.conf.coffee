@@ -6,6 +6,7 @@ module.exports = (config)->
       'bower_components/jquery/dist/jquery.js'
       '_build_test/**/*.js'
       {pattern: '_build_test/**/*.html', included: false}
+      {pattern: '_build_test/**/*.json', included: false}
     ]
 
     # browsers: ['Chrome_without_security']
