@@ -1,0 +1,645 @@
+{
+  "Cluster Bolt": {
+    "names": [
+      "Cluster Bolt",
+      "Cluster Bolts"
+    ],
+    "url": "http://prismata.gamepedia.com/Cluster_Bolt",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/c1/ClusterBolt-panel.png"
+  },
+  "Auride Core": {
+    "names": [
+      "Auride Core",
+      "Auride Cores"
+    ],
+    "url": "http://prismata.gamepedia.com/Auride_Core",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/ca/AurideCore-panel.png"
+  },
+  "Barrier": {
+    "names": [
+      "Barrier",
+      "Barriers"
+    ],
+    "url": "http://prismata.gamepedia.com/Barrier",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/7/72/Barrier-panel.png"
+  },
+  "Cryo Ray": {
+    "names": [
+      "Cryo Ray",
+      "Cryo Rays"
+    ],
+    "url": "http://prismata.gamepedia.com/Cryo_Ray",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/4/4e/CryoRay-panel.png"
+  },
+  "Forcefield": {
+    "names": [
+      "Forcefield",
+      "Forcefields"
+    ],
+    "url": "http://prismata.gamepedia.com/Forcefield",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/d/de/Forcefield-panel.png"
+  },
+  "Gauss Charge": {
+    "names": [
+      "Gauss Charge",
+      "Gauss Charges"
+    ],
+    "url": "http://prismata.gamepedia.com/Gauss_Charge",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9c/GaussCharge-panel.png"
+  },
+  "Pixie": {
+    "names": [
+      "Pixie",
+      "Pixies"
+    ],
+    "url": "http://prismata.gamepedia.com/Pixie",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/93/Pixie-panel.png"
+  },
+  "Thermite Core": {
+    "names": [
+      "Thermite Core",
+      "Thermite Cores"
+    ],
+    "url": "http://prismata.gamepedia.com/Thermite_Core",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/3c/ThermiteCore-panel.png"
+  },
+  "Doomed Drone": {
+    "names": [
+      "Doomed Drone",
+      "Doomed Drones"
+    ],
+    "url": "http://prismata.gamepedia.com/Doomed_Drone",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/f/f3/DoomedDrone-panel.png"
+  },
+  "Engineer": {
+    "names": [
+      "Engineer",
+      "Engineers"
+    ],
+    "url": "http://prismata.gamepedia.com/Engineer",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/0/01/Engineer-panel.png"
+  },
+  "Frostbite": {
+    "names": [
+      "Frostbite",
+      "Frostbites"
+    ],
+    "url": "http://prismata.gamepedia.com/Frostbite",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/e/e9/Frostbite-panel.png"
+  },
+  "Husk": {
+    "names": [
+      "Husk",
+      "Husks"
+    ],
+    "url": "http://prismata.gamepedia.com/Husk",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/d/d8/Husk-panel.png"
+  },
+  "Plexo Cell": {
+    "names": [
+      "Plexo Cell",
+      "Plexo Cells"
+    ],
+    "url": "http://prismata.gamepedia.com/Plexo_Cell",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/54/PlexoCell-panel.png"
+  },
+  "Trinity Drone": {
+    "names": [
+      "Trinity Drone",
+      "Trinity Drones"
+    ],
+    "url": "http://prismata.gamepedia.com/Trinity_Drone",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/1/13/TrinityDrone-panel.png"
+  },
+  "Blood Pact": {
+    "names": [
+      "Blood Pact",
+      "Blood Pacts"
+    ],
+    "url": "http://prismata.gamepedia.com/Blood_Pact",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/d/dd/BloodPact-panel.png"
+  },
+  "Drone": {
+    "names": [
+      "Drone",
+      "Drones"
+    ],
+    "url": "http://prismata.gamepedia.com/Drone",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9e/Drone-panel.png"
+  },
+  "Immolite": {
+    "names": [
+      "Immolite",
+      "Immolites"
+    ],
+    "url": "http://prismata.gamepedia.com/Immolite",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/cd/Immolite-panel.png"
+  },
+  "Perforator": {
+    "names": [
+      "Perforator",
+      "Perforators"
+    ],
+    "url": "http://prismata.gamepedia.com/Perforator",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/3a/Perforator-panel.png"
+  },
+  "Steelforge": {
+    "names": [
+      "Steelforge",
+      "Steelforges"
+    ],
+    "url": "http://prismata.gamepedia.com/Steelforge",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/a/a4/Steelforge-panel.png"
+  },
+  "Venge Cannon": {
+    "names": [
+      "Venge Cannon",
+      "Venge Cannons"
+    ],
+    "url": "http://prismata.gamepedia.com/Venge_Cannon",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/3c/VengeCannon-panel.png"
+  },
+  "Chrono Filter": {
+    "names": [
+      "Chrono Filter",
+      "Chrono Filters"
+    ],
+    "url": "http://prismata.gamepedia.com/Chrono_Filter",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9b/ChronoFilter-panel.png"
+  },
+  "Conduit": {
+    "names": [
+      "Conduit",
+      "Conduits"
+    ],
+    "url": "http://prismata.gamepedia.com/Conduit",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9a/Conduit-panel.png"
+  },
+  "Electrovore": {
+    "names": [
+      "Electrovore",
+      "Electrovores"
+    ],
+    "url": "http://prismata.gamepedia.com/Electrovore",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/0/02/Electrovore-panel.png"
+  },
+  "Fission Turret": {
+    "names": [
+      "Fission Turret",
+      "Fission Turrets"
+    ],
+    "url": "http://prismata.gamepedia.com/Fission_Turret",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/6f/FissionTurret-panel.png"
+  },
+  "Frost Brooder": {
+    "names": [
+      "Frost Brooder",
+      "Frost Brooders"
+    ],
+    "url": "http://prismata.gamepedia.com/Frost_Brooder",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/e/e8/FrostBrooder-panel.png"
+  },
+  "Grimbotch": {
+    "names": [
+      "Grimbotch",
+      "Grimbotches"
+    ],
+    "url": "http://prismata.gamepedia.com/Grimbotch",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/60/Grimbotch-panel.png"
+  },
+  "Tarsier": {
+    "names": [
+      "Tarsier",
+      "Tarsiers"
+    ],
+    "url": "http://prismata.gamepedia.com/Tarsier",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/7/7d/Tarsier-panel.png"
+  },
+  "Tia Thurnax": {
+    "names": [
+      "Tia Thurnax",
+      "Tia Thurnaxes"
+    ],
+    "url": "http://prismata.gamepedia.com/Tia_Thurnax",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/7/75/TiaThurnax-panel.png"
+  },
+  "Vivid Drone": {
+    "names": [
+      "Vivid Drone",
+      "Vivid Drones"
+    ],
+    "url": "http://prismata.gamepedia.com/Vivid_Drone",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/50/VividDrone-panel.png"
+  },
+  "Auric Impulse": {
+    "names": [
+      "Auric Impulse",
+      "Auric Impulses"
+    ],
+    "url": "http://prismata.gamepedia.com/Auric_Impulse",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/c4/AuricImpulse-panel.png"
+  },
+  "Blastforge": {
+    "names": [
+      "Blastforge",
+      "Blastforges"
+    ],
+    "url": "http://prismata.gamepedia.com/Blastforge",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/c6/Blastforge-panel.png"
+  },
+  "Feral Warden": {
+    "names": [
+      "Feral Warden",
+      "Feral Wardens"
+    ],
+    "url": "http://prismata.gamepedia.com/Feral_Warden",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/1/1a/FeralWarden-panel.png"
+  },
+  "Hellhound": {
+    "names": [
+      "Hellhound",
+      "Hellhounds"
+    ],
+    "url": "http://prismata.gamepedia.com/Hellhound",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/e/eb/Hellhound-panel.png"
+  },
+  "Iso Kronus": {
+    "names": [
+      "Iso Kronus",
+      "Iso Kronuses"
+    ],
+    "url": "http://prismata.gamepedia.com/Iso_Kronus",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/66/IsoKronus-panel.png"
+  },
+  "Rhino": {
+    "names": [
+      "Rhino",
+      "Rhinos"
+    ],
+    "url": "http://prismata.gamepedia.com/Rhino",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/58/Rhino-panel.png"
+  },
+  "Shiver Yeti": {
+    "names": [
+      "Shiver Yeti",
+      "Shiver Yetis"
+    ],
+    "url": "http://prismata.gamepedia.com/Shiver_Yeti",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/7/7e/ShiverYeti-panel.png"
+  },
+  "Shredder": {
+    "names": [
+      "Shredder",
+      "Shredders"
+    ],
+    "url": "http://prismata.gamepedia.com/Shredder",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/a/a0/Shredder-panel.png"
+  },
+  "Victory Bond": {
+    "names": [
+      "Victory Bond",
+      "Victory Bonds"
+    ],
+    "url": "http://prismata.gamepedia.com/Victory_Bond",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/2/2f/VictoryBond-panel.png"
+  },
+  "Wall": {
+    "names": [
+      "Wall",
+      "Walls"
+    ],
+    "url": "http://prismata.gamepedia.com/Wall",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/50/Wall-panel.png"
+  },
+  "Wild Drone": {
+    "names": [
+      "Wild Drone",
+      "Wild Drones"
+    ],
+    "url": "http://prismata.gamepedia.com/Wild_Drone",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/0/03/WildDrone-panel.png"
+  },
+  "Aegis": {
+    "names": [
+      "Aegis",
+      "Aegis"
+    ],
+    "url": "http://prismata.gamepedia.com/Aegis",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/98/Aegis-panel.png"
+  },
+  "Animus": {
+    "names": [
+      "Animus",
+      "Animuses"
+    ],
+    "url": "http://prismata.gamepedia.com/Animus",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/d/d8/Animus-panel.png"
+  },
+  "Gauss Cannon": {
+    "names": [
+      "Gauss Cannon",
+      "Gauss Cannons"
+    ],
+    "url": "http://prismata.gamepedia.com/Gauss_Cannon",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/ca/GaussCannon-panel.png"
+  },
+  "Militia": {
+    "names": [
+      "Militia",
+      "Militias"
+    ],
+    "url": "http://prismata.gamepedia.com/Militia",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/b/bb/Militia-panel.png"
+  },
+  "Ossified Drone": {
+    "names": [
+      "Ossified Drone",
+      "Ossified Drones"
+    ],
+    "url": "http://prismata.gamepedia.com/Ossified_Drone",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9e/OssifiedDrone-panel.png"
+  },
+  "Steelsplitter": {
+    "names": [
+      "Steelsplitter",
+      "Steelsplitters",
+      "Steelspitter",
+      "Steelspitters"
+    ],
+    "url": "http://prismata.gamepedia.com/Steelsplitter",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/a/a4/Steelsplitter-panel.png"
+  },
+  "Synthesizer": {
+    "names": [
+      "Synthesizer",
+      "Synthesizers"
+    ],
+    "url": "http://prismata.gamepedia.com/Synthesizer",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/35/Synthesizer-panel.png"
+  },
+  "Zemora Voidbringer": {
+    "names": [
+      "Zemora Voidbringer",
+      "Zemora Voidbringers"
+    ],
+    "url": "http://prismata.gamepedia.com/Zemora_Voidbringer",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/f/f4/ZemoraVoidbringer-panel.png"
+  },
+  "Bloodrager": {
+    "names": [
+      "Bloodrager",
+      "Bloodragers"
+    ],
+    "url": "http://prismata.gamepedia.com/Bloodrager",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/e/e2/Bloodrager-panel.png"
+  },
+  "Chieftain": {
+    "names": [
+      "Chieftain",
+      "Chieftains"
+    ],
+    "url": "http://prismata.gamepedia.com/Chieftain",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/60/Chieftain-panel.png"
+  },
+  "Deadeye Operative": {
+    "names": [
+      "Deadeye Operative",
+      "Deadeye Operatives"
+    ],
+    "url": "http://prismata.gamepedia.com/Deadeye_Operative",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/1/13/DeadeyeOperative-panel.png"
+  },
+  "Doomed Wall": {
+    "names": [
+      "Doomed Wall",
+      "Doomed Walls"
+    ],
+    "url": "http://prismata.gamepedia.com/Doomed_Wall",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/35/DoomedWall-panel.png"
+  },
+  "Flame Animus": {
+    "names": [
+      "Flame Animus",
+      "Flame Animuses"
+    ],
+    "url": "http://prismata.gamepedia.com/Flame_Animus",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/a/a9/FlameAnimus-panel.png"
+  },
+  "Gaussite Symbiote": {
+    "names": [
+      "Gaussite Symbiote",
+      "Gaussite Symbiotes"
+    ],
+    "url": "http://prismata.gamepedia.com/Gaussite_Symbiote",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/7/7d/GaussiteSymbiote-panel.png"
+  },
+  "Iceblade Golem": {
+    "names": [
+      "Iceblade Golem",
+      "Iceblade Golems"
+    ],
+    "url": "http://prismata.gamepedia.com/Iceblade_Golem",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/f/ff/IcebladeGolem-panel.png"
+  },
+  "Protoplasm": {
+    "names": [
+      "Protoplasm",
+      "Protoplasms"
+    ],
+    "url": "http://prismata.gamepedia.com/Protoplasm",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/7/71/Protoplasm-panel.png"
+  },
+  "Scorchilla": {
+    "names": [
+      "Scorchilla",
+      "Scorchillas"
+    ],
+    "url": "http://prismata.gamepedia.com/Scorchilla",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/e/ec/Scorchilla-panel.png"
+  },
+  "Shadowfang": {
+    "names": [
+      "Shadowfang",
+      "Shadowfangs"
+    ],
+    "url": "http://prismata.gamepedia.com/Shadowfang",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/8/8c/Shadowfang-panel.png"
+  },
+  "Xeno Guardian": {
+    "names": [
+      "Xeno Guardian",
+      "Xeno Guardians"
+    ],
+    "url": "http://prismata.gamepedia.com/Xeno_Guardian",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9c/XenoGuardian-panel.png"
+  },
+  "Doomed Mech": {
+    "names": [
+      "Doomed Mech",
+      "Doomed Meches"
+    ],
+    "url": "http://prismata.gamepedia.com/Doomed_Mech",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/2/23/DoomedMech-panel.png"
+  },
+  "Sentinel": {
+    "names": [
+      "Sentinel",
+      "Sentinels"
+    ],
+    "url": "http://prismata.gamepedia.com/Sentinel",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/4/41/Sentinel-panel.png"
+  },
+  "Energy Matrix": {
+    "names": [
+      "Energy Matrix",
+      "Energy Matrices"
+    ],
+    "url": "http://prismata.gamepedia.com/Energy_Matrix",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/f/fc/EnergyMatrix-panel.png"
+  },
+  "Hannibull": {
+    "names": [
+      "Hannibull",
+      "Hannibulls"
+    ],
+    "url": "http://prismata.gamepedia.com/Hannibull",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/f/f2/Hannibull-panel.png"
+  },
+  "Grenade Mech": {
+    "names": [
+      "Grenade Mech",
+      "Grenade Meches"
+    ],
+    "url": "http://prismata.gamepedia.com/Grenade_Mech",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/ce/GrenadeMech-panel.png"
+  },
+  "Polywall": {
+    "names": [
+      "Polywall",
+      "Polywalls"
+    ],
+    "url": "http://prismata.gamepedia.com/Polywall",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/c6/Polywall-panel.png"
+  },
+  "Tesla Coil": {
+    "names": [
+      "Tesla Coil",
+      "Tesla Coils"
+    ],
+    "url": "http://prismata.gamepedia.com/Tesla_Coil",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/5b/TeslaCoil-panel.png"
+  },
+  "Cauterizer": {
+    "names": [
+      "Cauterizer",
+      "Cauterizers"
+    ],
+    "url": "http://prismata.gamepedia.com/Cauterizer",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/5d/Cauterizer-panel.png"
+  },
+  "Cynestra": {
+    "names": [
+      "Cynestra",
+      "Cynestras"
+    ],
+    "url": "http://prismata.gamepedia.com/Cynestra",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/6f/Cynestra-panel.png"
+  },
+  "Tatsu Nullifier": {
+    "names": [
+      "Tatsu Nullifier",
+      "Tatsu Nullifiers"
+    ],
+    "url": "http://prismata.gamepedia.com/Tatsu_Nullifier",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/34/TatsuNullifier-panel.png"
+  },
+  "Amporilla": {
+    "names": [
+      "Amporilla",
+      "Amporillas"
+    ],
+    "url": "http://prismata.gamepedia.com/Amporilla",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/1/1f/Amporilla-panel.png"
+  },
+  "Centrifuge": {
+    "names": [
+      "Centrifuge",
+      "Centrifuges"
+    ],
+    "url": "http://prismata.gamepedia.com/Centrifuge",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/0/00/Centrifuge-panel.png"
+  },
+  "Plasmafier": {
+    "names": [
+      "Plasmafier",
+      "Plasmafiers"
+    ],
+    "url": "http://prismata.gamepedia.com/Plasmafier",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/2/23/Plasmafier-panel.png"
+  },
+  "Gauss Fabricator": {
+    "names": [
+      "Gauss Fabricator",
+      "Gauss Fabricators"
+    ],
+    "url": "http://prismata.gamepedia.com/Gauss_Fabricator",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/2/23/GaussFabricator-panel.png"
+  },
+  "Omega Splitter": {
+    "names": [
+      "Omega Splitter",
+      "Omega Splitters"
+    ],
+    "url": "http://prismata.gamepedia.com/Omega_Splitter",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/69/OmegaSplitter-panel.png"
+  },
+  "Drake": {
+    "names": [
+      "Drake",
+      "Drakes"
+    ],
+    "url": "http://prismata.gamepedia.com/Drake",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/b/b1/Drake-panel.png"
+  },
+  "Asteri Cannon": {
+    "names": [
+      "Asteri Cannon",
+      "Asteri Cannons"
+    ],
+    "url": "http://prismata.gamepedia.com/Asteri_Cannon",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/4/43/AsteriCannon-panel.png"
+  },
+  "Defense Grid": {
+    "names": [
+      "Defense Grid",
+      "Defense Grids"
+    ],
+    "url": "http://prismata.gamepedia.com/Defense_Grid",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/97/DefenseGrid-panel.png"
+  },
+  "Apollo": {
+    "names": [
+      "Apollo",
+      "Apollos"
+    ],
+    "url": "http://prismata.gamepedia.com/Apollo",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/e/ec/Apollo-panel.png"
+  },
+  "Centurion": {
+    "names": [
+      "Centurion",
+      "Centurions"
+    ],
+    "url": "http://prismata.gamepedia.com/Centurion",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/a/aa/Centurion-panel.png"
+  },
+  "Lucina Spinos": {
+    "names": [
+      "Lucina Spinos",
+      "Lucina Spinos",
+      "Lucina"
+    ],
+    "url": "http://prismata.gamepedia.com/Lucina_Spinos",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/3f/LucinaSpinos-panel.png"
+  }
+}
