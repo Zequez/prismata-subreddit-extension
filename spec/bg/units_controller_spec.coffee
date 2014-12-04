@@ -18,7 +18,7 @@ describe 'UnitsController', ->
 
   describe '#listen', ->
     it 'should respond with all the loaded units when requested', (done)->
-      units =
+      unitsData =
         "Conduit":
           "names": ["Conduit", "Conduits"]
           "url": "http://prismata.gamepedia.com/Conduit",
@@ -31,17 +31,17 @@ describe 'UnitsController', ->
       jasmine.Ajax.install()
       jasmine.Ajax.stubRequest(unitsJsonUrl)
         .andReturn
-          responseText: JSON.stringify(units)
+          responseText: JSON.stringify(unitsData)
 
       mockAddListener (listener)->
         listener {action: 'units'}, '123123123', (units)->
           expect(jasmine.Ajax.requests.mostRecent().url)
             .toMatch unitsJsonUrl
-          expect(units).toMatch units
+          expect(units).toMatch unitsData
 
-        listener {action: 'units'}, '123123123', (units)->
-          expect(jasmine.Ajax.requests.count()).toBe 1
-          done()
+          listener {action: 'units'}, '123123123', (units)->
+            expect(jasmine.Ajax.requests.count()).toBe 1
+            done()
 
       unitsController = new UnitsController
       unitsController.listen()

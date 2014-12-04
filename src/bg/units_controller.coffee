@@ -41,6 +41,7 @@ class PS.UnitsController
   _fetch: (callback)->
     @_get @dataUrl, (data)=>
       @data = JSON.parse data
+      callback(data)
     , =>
       @_fetchLocal callback
 
