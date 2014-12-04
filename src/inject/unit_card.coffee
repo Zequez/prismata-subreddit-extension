@@ -13,6 +13,7 @@ class PS.UnitCard
     @unit = unit
     @el = null # {HTMLElement}
     @cardImageUrl = null # {String}
+    @match = null
 
   ###*
   This method is called from Units. It returns a replacement string, and then
@@ -21,6 +22,7 @@ class PS.UnitCard
   @returns {String} Element to be generated in a string form
   ###
   replacementString: (match)->
+    @match = match
     "<a class=\"#{PS.UnitCard.className}\" href=\"#{@unit.url}\"><span class=\"flair flair-#{@unit.flairName}\"></span>#{match}</a>"
 
   ###*

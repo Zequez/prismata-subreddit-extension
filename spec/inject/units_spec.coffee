@@ -50,11 +50,7 @@ describe 'Units', ->
     """
     units = new Units()
 
-    unitCards = []
-    spyOn(PS, 'UnitCard').and.callFake ->
-      unitCard = new UnitCard arguments...
-      unitCards.push unitCard
-      unitCard
+    unitCards = allFutureInstancesOf 'UnitCard'
 
     units.load(doc[0]).then ->
       expect(PS.UnitCard).toHaveBeenCalled()
@@ -74,4 +70,27 @@ describe 'Units', ->
 
       for a, i in aa.toArray()
         expect(unitCards[i].el).toEqual a
+      done()
+
+  it "shouldn't replace the names on text inside HTML elements or in the middle of words", (done)->
+    mockUnitsEndpoint()
+    doc = $ """
+    <div class="entry">
+      <div class="md">
+        <p>
+          superDRONEistic
+          <a href="http://challonge.com/TARSIERcup">Let's go to the TaRSiEr cup!</a>
+          This is a real Engineer
+          WALLnuts is not spelled correctly
+        </p>
+      </div>
+    </div>
+    """
+    unitCards = allFutureInstancesOf 'UnitCard'
+
+    units = new Units()
+    units.load(doc[0]).then ->
+      matches = unitCards.map((i,e)-> i.match)
+      expect(matches.length).toBe 2
+      expect(matches).toMatch ['TaRSiEr', 'Engineer']
       done()

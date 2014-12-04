@@ -47,3 +47,12 @@ window.mockCardImageUrlEndpoint = (name, url)->
 
 window.getFile = (name, callback)->
   $.get("/base/_build_test/#{name}", callback)
+
+window.allFutureInstancesOf = (name)->
+  klass = PS[name]
+  instances = []
+  spyOn(PS, name).and.callFake ->
+    instance = new klass arguments...
+    instances.push instance
+    instance
+  instances

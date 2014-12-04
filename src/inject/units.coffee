@@ -52,7 +52,7 @@ class PS.Units
 
     # Combined regex of all the possible matches (plural and singular)
     # of all known units
-    combinedRegex = new RegExp(matchers.join('|'), 'ig')
+    combinedRegex = new RegExp('\\b' + matchers.join('\\b|\\b') + '\\b', 'ig')
 
 
     # Iterate all the pharagraphs individually and
