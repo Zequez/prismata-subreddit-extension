@@ -27,6 +27,8 @@ class PS.UnitsController
         else
           @_fetch (data)->
             sendResponse(data)
+          return true # async response
+      return
 
   ###*
   Fetch the remote units.json file from the Github repo and save the data
