@@ -24,10 +24,13 @@ class PS.FlyoutService
   ###
   show: (imageUrl)->
     @_insert() unless @el
+    if @imageUrl and @imageUrl isnt imageUrl
+      @imgEl.onload = => @el.style.display = 'block'
+    else
+      @el.style.display = 'block'
+
     @imageUrl = imageUrl
     @imgEl.src = @imageUrl
-    @el.style.display = 'block'
-    @el.style.zIndex = '9999'
     @visible = true
     @_setPosition()
 
@@ -50,6 +53,7 @@ class PS.FlyoutService
     @el = document.createElement('div')
     @el.className = @className
     @el.style.position = 'fixed'
+    @el.style.zIndex = '9999'
     document.body.appendChild @el
 
     @imgEl = document.createElement('img')
