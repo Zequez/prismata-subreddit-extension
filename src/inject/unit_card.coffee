@@ -40,20 +40,10 @@ class PS.UnitCard
     @el.addEventListener 'mouseout', => @_hideFlyout()
 
   _showFlyout: ->
-    if @cardImageUrl
-      PS.FlyoutService.show @cardImageUrl
-    else
-      @unit.cardImageUrl().then (cardImageUrl)=>
-        @cardImageUrl = cardImageUrl
-        @_setHref()
-        PS.FlyoutService.show @cardImageUrl
+    PS.FlyoutService.show @unit.panelUrl
 
   _hideFlyout: ->
-    if @cardImageUrl
-      PS.FlyoutService.hide @cardImageUrl
-    else
-      @unit.cardImageUrl().then (cardImageUrl)=>
-        PS.FlyoutService.hide @cardImageUrl
+    PS.FlyoutService.hide @unit.panelUrl
 
   _setHref: ->
     @el.href = @cardImageUrl

@@ -45,5 +45,5 @@ window.mockCardImageUrlEndpoint = (name, url)->
     expect(message).toEqual {action: 'unitCardImage', name: name}
     callback url
 
-window.getFixurePage = (name, callback)->
-  $.get("/base/_build_test/#{name}.html", callback)
+window.getFile = (name, callback)->
+  $.get("/base/_build_test/#{name}", callback)

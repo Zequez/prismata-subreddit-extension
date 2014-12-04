@@ -1,28 +1,35 @@
 Unit = PS.Unit
 
+unitData =
+  'names': [
+    'Conduit'
+    'Conduits'
+  ]
+  'url': 'http://prismata.gamepedia.com/Conduit'
+  'panelUrl': 'http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9a/Conduit-panel.png'
+
 describe 'Unit', ->
-  describe '#cardImageUrl', ->
-    # it 'should resolve to the promise given', (done)->
-    #   unit = new Unit('Conduit', Promise.resolve('http://example.com'))
-    #   unit.cardImageUrl().then (imageUrl)->
-    #     expect(imageUrl).toBe 'http://example.com'
-    #     done()
+  describe '#name', ->
+    it 'should be read from the first parameter', ->
+      unit = new Unit('Conduitttt', unitData)
+      expect(unit.name).toBe 'Conduitttt'
 
-    it 'should get the data from the background page', (done)->
-      mockCardImageUrlEndpoint('Conduit', 'http://example.com')
+  describe '#names', ->
+    it 'should be read from the data', ->
+      unit = new Unit('Conduitttt', unitData)
+      expect(unit.names).toMatch ['Conduit', 'Conduits']
 
-      unit = new Unit('Conduit')
-      unit.cardImageUrl().then (imageUrl)->
-        expect(imageUrl).toBe 'http://example.com'
-        done()
+  describe '#panelUrl', ->
+    it 'should be read from the data', ->
+      unit = new Unit('Conduitttt', unitData)
+      expect(unit.panelUrl).toMatch 'http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9a/Conduit-panel.png'
 
-  describe '#matchers', ->
-    it 'should return a list of matchers as strings', ->
-      unit = new Unit('Conduit')
-      expect(unit.matchers()).toMatch ['Conduits', 'Conduit']
-
+  describe '#url', ->
+    it 'should be read from the data', ->
+      unit = new Unit('Conduitttt', unitData)
+      expect(unit.url).toMatch 'http://prismata.gamepedia.com/Conduit'
 
   describe '#flairName', ->
     it 'should be all lowercase and without spaces', ->
-      unit = new Unit('Iso Cronus Potato Salad')
+      unit = new Unit('Iso Cronus Potato Salad', unitData)
       expect(unit.flairName).toMatch 'isocronuspotatosalad'

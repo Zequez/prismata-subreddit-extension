@@ -3,25 +3,14 @@ Unit = PS.Unit
 UnitCard = PS.UnitCard
 
 describe 'Units', ->
-  mockUnitsNames = [
-    "Engineer"
-    "Drone"
-    "Conduit"
-    "Blastforge"
-    "Animus"
-    "Forcefield"
-    "Gauss Cannon"
-    "Wall"
-    "Steelsplitter"
-    "Tarsier"
-    "Rhino"
-  ]
+  # The basic 11 units, taken from units.json
+  mockUnits = {"Engineer":{"names":["Engineer","Engineers"],"url":"http://prismata.gamepedia.com/Engineer","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/0/01/Engineer-panel.png"},"Drone":{"names":["Drone","Drones"],"url":"http://prismata.gamepedia.com/Drone","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9e/Drone-panel.png"},"Conduit":{"names":["Conduit","Conduits"],"url":"http://prismata.gamepedia.com/Conduit","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9a/Conduit-panel.png"},"Blastforge":{"names":["Blastforge","Blastforges"],"url":"http://prismata.gamepedia.com/Blastforge","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/c6/Blastforge-panel.png"},"Animus":{"names":["Animus","Animuses"],"url":"http://prismata.gamepedia.com/Animus","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/d/d8/Animus-panel.png"},"Forcefield":{"names":["Forcefield","Forcefields"],"url":"http://prismata.gamepedia.com/Forcefield","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/d/de/Forcefield-panel.png"},"Gauss Cannon":{"names":["Gauss Cannon","Gauss Cannons"],"url":"http://prismata.gamepedia.com/Gauss_Cannon","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/ca/GaussCannon-panel.png"},"Wall":{"names":["Wall","Walls"],"url":"http://prismata.gamepedia.com/Wall","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/50/Wall-panel.png"},"Steelsplitter":{"names":["Steelsplitter","Steelsplitters","Steelspitter","Steelspitters"],"url":"http://prismata.gamepedia.com/Steelsplitter","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/a/a4/Steelsplitter-panel.png"},"Tarsier":{"names":["Tarsier","Tarsiers"],"url":"http://prismata.gamepedia.com/Tarsier","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/7/7d/Tarsier-panel.png"},"Rhino":{"names":["Rhino","Rhinos"],"url":"http://prismata.gamepedia.com/Rhino","panelUrl":"http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/58/Rhino-panel.png"}}
 
   mockUnitsEndpoint = ->
     spyOn(chrome, 'runtime')
     spyOn(chrome.runtime, 'sendMessage').and.callFake (message, callback)->
       expect(message).toEqual {action: 'units'}
-      callback mockUnitsNames
+      callback mockUnits
 
   it 'should get the units names from the chrome API', ->
     mockUnitsEndpoint()

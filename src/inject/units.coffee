@@ -8,7 +8,7 @@ Loads and generates all the units
 ###
 class PS.Units
   constructor: ->
-    @unitsNames = []
+    @unitsData = null
     @units = []
     @cards = []
 
@@ -21,10 +21,10 @@ class PS.Units
   _loadUnits: ->
     new Promise (resolve)=>
       chrome.runtime.sendMessage { action: 'units' }, (response)=>
-        @unitsNames = response
+        @unitsData = response
 
-        for name in @unitsNames
-          @units.push new PS.Unit(name)
+        for name, data of @unitsData
+          @units.push new PS.Unit(name, data)
 
         resolve()
 
@@ -42,10 +42,13 @@ class PS.Units
 
     # List of all units matchers. Plural and singular.
     matchers = @units.reduce (a, unit)->
-      m = unit.matchers()
-      unitsMap[i.toLowerCase()] = unit for i in m
-      a.concat m
+      unitsMap[name.toLowerCase()] = unit for name in unit.names
+      a.concat unit.names
     , []
+
+    # We sort by the length of the words, so plurals
+    # are replaced before singulars
+    matchers.sort((a, b)-> b.length - a.length)
 
     # Combined regex of all the possible matches (plural and singular)
     # of all known units

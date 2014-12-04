@@ -27,21 +27,24 @@ sources =
   dev: './_build_dev/**/*'
   prod: './_build_prod/**/*'
   test: './_build_test/**/*'
+  data: './data/**/*.json'
 
   srcBackgrounds: [
-    # './bower_components/modulejs/dist/modulejs.min.js'
+    # vendor scripts here
     './src/bg/preBackground.coffee'
     './src/bg/**/!(background|preBackground)*.coffee'
     './src/bg/background.coffee'
   ]
 
   srcInjects: [
-    './bower_components/pluralize/pluralize.js'
+    # vendor scripts here
     './src/inject/preInject.coffee'
     './src/inject/**/!(inject|preInject)*.coffee'
     './src/inject/inject.coffee'
   ]
+
   srcTests: [
+    './data/**/*.json'
     './spec/fixtures/**.*'
     './spec/spec_helper.coffee'
     './spec/**/!(spec_helper)*.coffee'
@@ -92,6 +95,10 @@ gulp.task 'src_build_static', ->
   resetFilters()
   gulp.src(sources.src)
     .pipe(filters.noScript)
+    .pipe(gulp.dest(destinations.dev))
+
+  # Copy the data/units.json file
+  gulp.src(sources.data)
     .pipe(gulp.dest(destinations.dev))
 
 gulp.task 'src_build_for_deployment', ->
