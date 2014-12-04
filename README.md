@@ -10,20 +10,25 @@ When a unit change we should update it here. You can make a pull request if you 
 
 - 0.1.0 (in development)
   - Inject script into the subreddit page and match the whole name of units
-  - Load units names from the Prismata Wiki
-  - Load units pictures on-demand from the Prismata Wiki
+  - Load units data from the Github repo /data/units.json
   - Display the unit picture on mouse hover
+  - Display flails for matches
+  - Link to the wiki on each match
 - 0.2.0 (planned)
-  - Account for common spelling mistakes and differences
-  - Match prismata post on the front page too
+  - Automatically add links to replays
+  - Match prismata post on the front page too, and on titles
+  - Add an options page
+    - Define if you want to display only the text
+    - Define if you want to display only the flails
+    - Define the size of the flails
+  - Replace standalone letters of basic unit with icons
+    - B: Conduit
+    - R: Blastforge
+    - G: Animus
+    - E: Energy
+    - <number-at-the-begining>: Gold
 - 0.3.0 (planned)
-  - Add little icons next to each match, use the CSS from the flairs
-  - Replace standalone letters of basic unit with icons too
-- 0.4.0 (planned)
   - Add a toolbox for injecting units when creating a post or a comment
-- 0.5.0 (planned)
+- 0.4.0 (planned)
   - Automatically replace units with CSS-friendly equivalent to display icons and allow non-extensions users to see icons too
-- 0.6.0 (planned)
-  - Add links to unlinked replays, and automatically generate link when writing on the toolbox
-- 0.7.0 (planned)
-  - Add title to common Prismata acronyms and automatically generate CSS-friendly acronym with the toolbox
+    gonna need to coordinate with mods to add the ability to use the flail icons with links on the subreddit CSS.
