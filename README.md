@@ -1,7 +1,7 @@
 ## PSE: Prismata Subreddit Extension
 
 <p align="center">
-<img height="750" width="865" src="https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/screenshot.png">
+<img src="https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/screenshot.png">
 
 This is a *non-official* Chrome extension for the
 [Prismata Subreddit /r/Prismata](http://www.reddit.com/r/Prismata/).
