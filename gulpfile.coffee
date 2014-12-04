@@ -42,9 +42,11 @@ sources =
     './src/inject/inject.coffee'
   ]
   srcTests: [
+    './spec/fixtures/**.*'
     './spec/spec_helper.coffee'
     './spec/**/!(spec_helper)*.coffee'
   ]
+
 
 sources.srcTests = sources
   .srcBackgrounds[0...-1]
@@ -107,7 +109,7 @@ gulp.task 'src_build_for_test', ->
   gulp.src(sources.srcTests)
     # .pipe(sourcemaps.init())
     .pipe(filters.coffee).pipe(coffee()).pipe(filters.coffee.restore())
-    .pipe(concat(destinations.testName))
+    .pipe(filters.js).pipe(concat(destinations.testName)).pipe(filters.js.restore())
     # .pipe(sourcemaps.write())
     .pipe(gulp.dest(destinations.test))
 
@@ -128,7 +130,6 @@ gulp.task 'build_zip', ->
   gulp.src(sources.prod)
     .pipe(zip(destinations.zipName))
     .pipe(gulp.dest(destinations.zipPath))
-
 
 gulp.task 'default', [
   'watch'

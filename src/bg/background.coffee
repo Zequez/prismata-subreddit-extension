@@ -7,6 +7,9 @@ making all the neccesary requests to get the images links.
 #   chrome.pageAction.show sender.tab.id
 #   sendResponse()
 
+class UnitScraper
+
+
 unitsNames = [
   "Engineer"
   "Drone"

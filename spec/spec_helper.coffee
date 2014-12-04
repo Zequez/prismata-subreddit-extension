@@ -44,3 +44,6 @@ window.mockCardImageUrlEndpoint = (name, url)->
   spyOn(chrome.runtime, 'sendMessage').and.callFake (message, callback)->
     expect(message).toEqual {action: 'unitCardImage', name: name}
     callback url
+
+window.getFixurePage = (name, callback)->
+  $.get("/base/_build_test/#{name}.html", callback)

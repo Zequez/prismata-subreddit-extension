@@ -1,3 +1,11 @@
+### data/units.json
+
+This file is loaded by the extension from this same repo. It has information
+about all the units in the game, along with a link to the wiki page, and
+a link to the official Wiki panel picture with all the unit information.
+
+When a unit change we should update it here. You can make a pull request if you want.
+
 ### Changelog
 
 - 0.1.0 (in development)

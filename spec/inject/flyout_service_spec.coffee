@@ -30,7 +30,7 @@ describe 'FlyoutService', ->
       expect(flyoutEl().is(':visible')).toBe true
 
     describe 'flyout position', ->
-      iit 'should position the flyout 10px up/right next to the mouse', (done)->
+      it 'should position the flyout 10px up/right next to the mouse', (done)->
         pageHeight = document.documentElement.clientHeight
         $(document.body).fireMouseEvent 'mousemove', clientX: 50, clientY: 100
         setTimeout ->
