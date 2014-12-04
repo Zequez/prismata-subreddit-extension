@@ -40,11 +40,17 @@ so I get an email when anything changes and I'll try to keep it in sync with the
     - Define if you want to display only the flails
     - Define the size of the flails
   - Replace standalone letters of basic unit with icons
-    - B: Conduit
-    - R: Blastforge
-    - G: Animus
-    - E: Energy
-    - &lt;number-at-the-begining&gt;: Gold
+    - E: Engineer
+    - D: Drone
+    - C: Conduit
+    - B: Blastforge
+    - A: Animus
+    - F: Forcefield
+    - G: Gauss Cannon
+    - W: Wall
+    - S: Steelsplitter
+    - T: Tarsier
+    - R: Rhino
 - 0.3.0 (planned)
   - Add a toolbox for injecting units when creating a post or a comment
 - 0.4.0 (planned)
