@@ -25,6 +25,7 @@
     "lodash-node": "~2.4.1",
     "karma-chrome-launcher": "~0.1.6",
     "jasmine-ajax": "~2.99.0",
-    "karma-jasmine-ajax": "~0.1.4"
+    "karma-jasmine-ajax": "~0.1.4",
+    "crx": "~2.0.0"
   }
 }

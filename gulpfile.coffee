@@ -15,7 +15,7 @@ resetFilters = ->
   filters =
     js:       gulpFilter('**/*.js')
     coffee:   gulpFilter('**/*.coffee')
-    noScript: gulpFilter(['**/*', '!**/*.coffee', '!**/*.js'])
+    noScript: gulpFilter(['**/*', '!**/*.coffee', '!**/*.js', '!**/*.psd'])
 resetFilters()
 
 sources =
