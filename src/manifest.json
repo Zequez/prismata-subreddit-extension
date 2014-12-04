@@ -16,7 +16,8 @@
     "persistent": true
   },
   "permissions": [
-    "http://www.reddit.com/"
+    "http://www.reddit.com/",
+    "https://raw.githubusercontent.com/zequez/prismata-subreddit-extension/data/units.json"
   ],
   "content_scripts": [
     {
