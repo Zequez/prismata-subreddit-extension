@@ -57,6 +57,8 @@ so I get an email when anything changes and I'll try to keep it in sync with the
   - Using the toolbox, automatically replace units with CSS-friendly-link equivalent to display icons
     and allow non-extensions users to see icons too. Gonna need to coordinate with mods
     to add the ability to use links to display the flail icons changing the subreddit CSS.
+- 0.5.0 (planned)
+  - Add instant units search tool to the Reddit search box when inside /r/Prismata
 
 ## License
 
