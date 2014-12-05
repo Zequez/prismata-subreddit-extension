@@ -10,9 +10,12 @@ It adds a bunch of cool features:
  - When you hover the mouse on an unit name it displays the unit panel with all the information
    just like in the game. These panels come directly from the [official Prismata Wiki](http://prismata.gamepedia.com/).
  - Each unit name detected is turned into a link to the Wiki page of that unit.
+ - Automatically links the game replays IDs
 
 <p align="center">
-  [<img src="https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/images/chrome-web-store.png"/>](https://chrome.google.com/webstore/detail/prismata-subreddit-extens/kibofaneppnocghmpkmanakeojkakblp)
+  <a href="https://chrome.google.com/webstore/detail/prismata-subreddit-extens/kibofaneppnocghmpkmanakeojkakblp">
+    <img src="https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/images/chrome-web-store.png"/>
+  </a>
 </p>
 
 ## data/units.json
