@@ -213,7 +213,9 @@
   "Drone": {
     "names": [
       "Drone",
-      "Drones"
+      "Drones",
+      "Droid",
+      "Droids"
     ],
     "url": "http://prismata.gamepedia.com/Drone",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9e/Drone-panel.png"
