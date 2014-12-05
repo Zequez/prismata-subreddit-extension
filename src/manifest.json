@@ -1,6 +1,6 @@
 {
   "name": "Prismata Subreddit Extension",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha1",
   "manifest_version": 2,
   "description": "A non-official Chrome extension for the Prismata subreddit that adds a bunch of neat features",
   "homepage_url": "http://github.com/zequez/prismata-subreddit-extension",

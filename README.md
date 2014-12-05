@@ -27,13 +27,13 @@ so I get an email when anything changes and I'll try to keep it in sync with the
 ## Changelog (and planned features)
 
 - 0.1.0 (current)
-  - Inject script into the subreddit page and match the whole name of units
-  - Load units data from the Github repo /data/units.json
-  - Display the unit picture on mouse hover
-  - Display flails for matches
-  - Link to the wiki on each match
+  - :heavy_check_mark: Inject script into the subreddit page and match the whole name of units
+  - :heavy_check_mark: Load units data from the Github repo /data/units.json
+  - :heavy_check_mark: Display the unit picture on mouse hover
+  - :heavy_check_mark: Display flails for matches
+  - :heavy_check_mark: Link to the wiki on each match
 - 0.2.0 (in development)
-  - Automatically add links to replays
+  - :heavy_check_mark: Automatically add links to replays
   - Match prismata post on the front page too, and on titles
   - Add an options page
     - Define if you want to display only the text
