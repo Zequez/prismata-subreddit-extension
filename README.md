@@ -38,7 +38,7 @@ so I get an email when anything changes and I'll try to keep it in sync with the
   - :heavy_check_mark: Link to the wiki on each match
 - 0.2.0 (in development)
   - :heavy_check_mark: Automatically add links to replays
-  - Match prismata post on the front page too, and on titles
+  - Match Prismata post on the front page too, and on titles
   - Add an options page
     - Define if you want to display only the text
     - Define if you want to display only the flails
