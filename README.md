@@ -32,7 +32,7 @@ so I get an email when anything changes and I'll try to keep it in sync with the
   - Display the unit picture on mouse hover
   - Display flails for matches
   - Link to the wiki on each match
-- 0.2.0 (planned)
+- 0.2.0 (in development)
   - Automatically add links to replays
   - Match prismata post on the front page too, and on titles
   - Add an options page
