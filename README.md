@@ -1,7 +1,6 @@
 ## PSE: Prismata Subreddit Extension
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/screenshot.png">
+<img src="https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/images/screenshot.png"/>
 
 This is a *non-official* Chrome extension for the
 [Prismata Subreddit /r/Prismata](http://www.reddit.com/r/Prismata/).
@@ -12,7 +11,9 @@ It adds a bunch of cool features:
    just like in the game. These panels come directly from the [official Prismata Wiki](http://prismata.gamepedia.com/).
  - Each unit name detected is turned into a link to the Wiki page of that unit.
 
- THE EXTENSION HASN'T BEEN RELEASED ON THE CHROME WEB STORE YET. I'm gonna do that tomorrow or Friday.
+<p align="center">
+  [<img src="https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/images/chrome-web-store.png"/>](https://chrome.google.com/webstore/detail/prismata-subreddit-extens/kibofaneppnocghmpkmanakeojkakblp)
+</p>
 
 ## data/units.json
 
