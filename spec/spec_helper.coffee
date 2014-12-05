@@ -56,3 +56,9 @@ window.allFutureInstancesOf = (name)->
     instances.push instance
     instance
   instances
+
+# Remove whitespace outside tags
+window.rmws = (string)->
+  return string if !string
+  string.replace /(^|>)[^<>]*(<|$)/g, (m)->
+    m.replace(/\s/g, '')

@@ -17,7 +17,7 @@ describe 'UnitsController', ->
 
 
   describe '#listen', ->
-    iit 'should respond with all the loaded units when requested', (done)->
+    it 'should respond with all the loaded units when requested', (done)->
       unitsData =
         "Conduit":
           "names": ["Conduit", "Conduits"]

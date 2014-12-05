@@ -47,7 +47,8 @@ sources =
     './data/**/*.json'
     './spec/fixtures/**.*'
     './spec/spec_helper.coffee'
-    './spec/**/!(spec_helper)*.coffee'
+    './spec/spec_helper_spec.coffee'
+    './spec/**/!(spec_helper).coffee'
   ]
 
 
