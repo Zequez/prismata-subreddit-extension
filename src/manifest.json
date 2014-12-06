@@ -1,7 +1,7 @@
 {
   "name": "Prismata Subreddit Extension",
-  "version": "0.2.0.1",
-  "version_name": "0.2.0 Alpha 1",
+  "version": "0.2.0.2",
+  "version_name": "0.2.0 Alpha 2",
   "manifest_version": 2,
   "description": "A non-official Chrome extension for the Prismata subreddit that adds a bunch of neat features",
   "homepage_url": "http://github.com/zequez/prismata-subreddit-extension",
@@ -17,14 +17,14 @@
     "persistent": false
   },
   "permissions": [
-    "http://www.reddit.com/",
+    "*://www.reddit.com/*",
     "https://raw.githubusercontent.com/Zequez/prismata-subreddit-extension/master/data/units.json"
   ],
   "content_scripts": [
     {
       "run_at": "document_end",
       "matches": [
-        "http://www.reddit.com/*"
+        "*://www.reddit.com/*"
       ],
       "js": [
         "inject/inject.js"
