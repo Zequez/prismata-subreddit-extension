@@ -25,6 +25,16 @@
     "url": "http://prismata.gamepedia.com/Animus",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/d/d8/Animus-panel.png"
   },
+  "Antima Comet": {
+    "names": [
+      "Antima Comet",
+      "Antima Comets",
+      "Antima",
+      "Antimas"
+    ],
+    "url": "http://prismata.gamepedia.com/Antima_Comet",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/32/AntimaComet-panel.png"
+  },
   "Apollo": {
     "names": [
       "Apollo",
