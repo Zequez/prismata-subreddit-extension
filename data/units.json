@@ -2,7 +2,8 @@
   "Aegis": {
     "names": [
       "Aegis",
-      "Aegis"
+      "Aegises",
+      "Aeges"
     ],
     "url": "http://prismata.gamepedia.com/Aegis",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/98/Aegis-panel.png"
@@ -18,10 +19,21 @@
   "Animus": {
     "names": [
       "Animus",
-      "Animuses"
+      "Animuses",
+      "Animi"
     ],
     "url": "http://prismata.gamepedia.com/Animus",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/d/d8/Animus-panel.png"
+  },
+  "Antima Comet": {
+    "names": [
+      "Antima Comet",
+      "Antima Comets",
+      "Antima",
+      "Antimas"
+    ],
+    "url": "http://prismata.gamepedia.com/Antima_Comet",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/32/AntimaComet-panel.png"
   },
   "Apollo": {
     "names": [
@@ -93,7 +105,9 @@
   "Cauterizer": {
     "names": [
       "Cauterizer",
-      "Cauterizers"
+      "Cauterizers",
+      "Cauteriser",
+      "Cauterisers",
     ],
     "url": "http://prismata.gamepedia.com/Cauterizer",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/5d/Cauterizer-panel.png"
@@ -149,7 +163,9 @@
   "Cryo Ray": {
     "names": [
       "Cryo Ray",
-      "Cryo Rays"
+      "Cryo Rays",
+      "Cryo",
+      "Cryos"
     ],
     "url": "http://prismata.gamepedia.com/Cryo_Ray",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/4/4e/CryoRay-panel.png"
@@ -173,7 +189,9 @@
   "Defense Grid": {
     "names": [
       "Defense Grid",
-      "Defense Grids"
+      "Defense Grids",
+      "Defence Grid",
+      "Defence Grids"
     ],
     "url": "http://prismata.gamepedia.com/Defense_Grid",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/97/DefenseGrid-panel.png"
@@ -189,7 +207,7 @@
   "Doomed Mech": {
     "names": [
       "Doomed Mech",
-      "Doomed Meches"
+      "Doomed Mechs"
     ],
     "url": "http://prismata.gamepedia.com/Doomed_Mech",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/2/23/DoomedMech-panel.png"
@@ -263,7 +281,8 @@
   "Flame Animus": {
     "names": [
       "Flame Animus",
-      "Flame Animuses"
+      "Flame Animuses",
+      "Flame Animi"
     ],
     "url": "http://prismata.gamepedia.com/Flame_Animus",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/a/a9/FlameAnimus-panel.png"
@@ -327,7 +346,7 @@
   "Grenade Mech": {
     "names": [
       "Grenade Mech",
-      "Grenade Meches"
+      "Grenade Mechs"
     ],
     "url": "http://prismata.gamepedia.com/Grenade_Mech",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/c/ce/GrenadeMech-panel.png"
@@ -383,7 +402,8 @@
   "Iso Kronus": {
     "names": [
       "Iso Kronus",
-      "Iso Kronuses"
+      "Iso Kronuses",
+      "Iso Kroni"
     ],
     "url": "http://prismata.gamepedia.com/Iso_Kronus",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/66/IsoKronus-panel.png"
@@ -392,7 +412,9 @@
     "names": [
       "Lucina Spinos",
       "Lucina Spinos",
-      "Lucina"
+      "Lucina Spinoses",
+      "Lucina",
+      "Lucinas"
     ],
     "url": "http://prismata.gamepedia.com/Lucina_Spinos",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/3f/LucinaSpinos-panel.png"
@@ -405,6 +427,14 @@
     "url": "http://prismata.gamepedia.com/Militia",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/b/bb/Militia-panel.png"
   },
+  "Odin": {
+    "names": [
+      "Odin",
+      "Odins"
+    ],
+    "url": "http://prismata.gamepedia.com/Odin",
+    "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/6/68/Odin-panel.png"
+  },
   "Omega Splitter": {
     "names": [
       "Omega Splitter",
@@ -416,7 +446,9 @@
   "Ossified Drone": {
     "names": [
       "Ossified Drone",
-      "Ossified Drones"
+      "Ossified Drones",
+      "Ossified",
+      "Ossifieds"
     ],
     "url": "http://prismata.gamepedia.com/Ossified_Drone",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9e/OssifiedDrone-panel.png"
@@ -538,7 +570,9 @@
   "Synthesizer": {
     "names": [
       "Synthesizer",
-      "Synthesizers"
+      "Synthesizers",
+      "Synthesiser",
+      "Synthesisers"
     ],
     "url": "http://prismata.gamepedia.com/Synthesizer",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/3/35/Synthesizer-panel.png"
@@ -578,7 +612,9 @@
   "Tia Thurnax": {
     "names": [
       "Tia Thurnax",
-      "Tia Thurnaxes"
+      "Tia Thurnaxes",
+      "Tia",
+      "Tias"
     ],
     "url": "http://prismata.gamepedia.com/Tia_Thurnax",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/7/75/TiaThurnax-panel.png"
@@ -587,6 +623,8 @@
     "names": [
       "Trinity Drone",
       "Trinity Drones"
+      "Trinity",
+      "Trinities"
     ],
     "url": "http://prismata.gamepedia.com/Trinity_Drone",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/1/13/TrinityDrone-panel.png"
@@ -612,7 +650,9 @@
   "Vivid Drone": {
     "names": [
       "Vivid Drone",
-      "Vivid Drones"
+      "Vivid Drones",
+      "Vivid",
+      "Vivids"
     ],
     "url": "http://prismata.gamepedia.com/Vivid_Drone",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/5/50/VividDrone-panel.png"
@@ -636,7 +676,9 @@
   "Xeno Guardian": {
     "names": [
       "Xeno Guardian",
-      "Xeno Guardians"
+      "Xeno Guardians",
+      "Xeno",
+      "Xenos"
     ],
     "url": "http://prismata.gamepedia.com/Xeno_Guardian",
     "panelUrl": "http://hydra-media.cursecdn.com/prismata.gamepedia.com/9/9c/XenoGuardian-panel.png"
